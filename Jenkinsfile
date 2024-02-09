@@ -9,7 +9,7 @@ pipeline {
                 steps {
                 cleanWs()
                 }
-    }
+         }
 
     stage("Checkout from SCM"){
                 steps {
@@ -28,7 +28,6 @@ pipeline {
                  sh "mvn test"
            }
        }
-    }
     stage("SonarQube Analysis"){
         steps {
                 script {
@@ -37,5 +36,7 @@ pipeline {
                     }
                 }
         }
-    }    
+     }    
+        
+    }
 }
